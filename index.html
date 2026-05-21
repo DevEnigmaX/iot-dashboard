@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IoT Industrial Dashboard</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+    <h2>⚡ IoT Industrial Dashboard</h2>
+
+    <div class="status">
+        <div class="dot"></div>
+        ONLINE
+    </div>
+</header>
+
+<div class="container">
+
+    <div class="grid">
+
+        <div class="card">
+            <div class="title">🌡 Temperatura</div>
+            <div class="value" id="temp">-- °C</div>
+        </div>
+
+        <div class="card">
+            <div class="title">💧 Humedad</div>
+            <div class="value" id="hum">-- %</div>
+        </div>
+
+        <div class="card">
+            <div class="title">📡 MQTT</div>
+            <div class="value" id="mqtt">OK</div>
+        </div>
+
+        <div class="card">
+            <div class="title">⏱ Hora</div>
+            <div class="value" id="time">--</div>
+        </div>
+
+    </div>
+
+    <div class="alert" id="alert">
+        Esperando datos del ESP32...
+    </div>
+
+    <button onclick="manualRefresh()">Actualizar</button>
+
+</div>
+
+<script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
